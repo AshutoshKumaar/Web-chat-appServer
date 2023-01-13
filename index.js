@@ -12,7 +12,7 @@ const user = require('./models/userschema.js')
 
 const app = express()
 dotenv.config()
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 8000
 
 // Router Connection
 app.use(bodyParser.json({ extended: true }))
