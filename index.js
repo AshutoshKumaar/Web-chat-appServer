@@ -12,6 +12,10 @@ const user = require('./models/userschema.js')
 
 const app = express()
 dotenv.config()
+
+const Name = process.env.Name
+const Pass = process.env.pass
+
 const PORT = process.env.PORT || 8000
 
 // Router Connection
@@ -23,7 +27,7 @@ app.use('/', routes)
 
 //calling DataBase
 
-makeConnection()
+makeConnection(Name, Pass)
 
 const users = {}
 
