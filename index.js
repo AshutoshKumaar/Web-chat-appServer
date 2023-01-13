@@ -1,12 +1,12 @@
 const express = require('express')
 const http = require('http')
 const dotenv = require('dotenv')
-const makeConnection = require('../server/database/db.js')
+const makeConnection = require('./database/db.js')
 const cors = require('cors')
 const socketIo = require('socket.io')
 const bodyParser = require('body-parser')
-// const Routes = require('../server/Routes/routes.js')
-const routes = require('../server/Routes/routes.js')
+
+const routes = require('./Routes/routes.js')
 const { Socket } = require('dgram')
 const user = require('./models/userschema.js')
 
